@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Pattern Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pixel Pattern Generator</h1>
+        </header>
+        
+        <div class="app-container">
+            <div class="controls-panel">
+                <div class="control-group">
+                    <label for="rows">Rows:</label>
+                    <input type="number" id="rows" min="1" max="100" value="20">
+                </div>
+                
+                <div class="control-group">
+                    <label for="columns">Columns:</label>
+                    <input type="number" id="columns" min="1" max="100" value="20">
+                </div>
+                
+                <div class="control-group">
+                    <label for="pixelSize">Pixel Size (px):</label>
+                    <input type="number" id="pixelSize" min="5" max="50" value="20">
+                </div>
+                
+                <div class="control-group">
+                    <label for="patternType">Pattern Type:</label>
+                    <select id="patternType">
+                        <option value="checkerboard">Checkerboard</option>
+                        <option value="gradient">Gradient</option>
+                        <option value="stripes">Stripes</option>
+                        <option value="random">Random</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>Colors:</label>
+                    <div class="color-inputs" id="colorInputs">
+                        <div class="color-input">
+                            <input type="color" class="color-picker" value="#3498db">
+                        </div>
+                        <div class="color-input">
+                            <input type="color" class="color-picker" value="#e74c3c">
+                        </div>
+                        <button id="addColor" type="button" title="Add color (max 5)">+</button>
+                    </div>
+                    <div class="color-count"><span id="colorCount">2</span>/5 colors</div>
+                </div>
+                
+                <button id="generateBtn" class="primary-btn">Generate Pattern</button>
+                <button id="downloadBtn" class="secondary-btn">Download as PNG</button>
+            </div>
+            
+            <div class="output-panel">
+                <div class="pattern-container">
+                    <div id="pattern"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

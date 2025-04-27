@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;
+    --accent-color: #7209b7;
+    --text-color: #2b2d42;
+    --bg-color: #f8f9fa;
+    --panel-bg: #ffffff;
+    --border-color: #dee2e6;
+    --success-color: #06d6a0;
+}
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: 'Courier New', monospace;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6px;
+    padding: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+}
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 40px;
+}
+header p {
+    font-size: 16px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: var(--panel-bg);
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    margin-bottom: 32px;
+}
+@media (min-width: 768px) {
+    .app-container {
+        flex-direction: row;
+    }
+}
+.controls-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-width: 250px;
+}
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-color);
+}
+input, select {
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    background-color: var(--bg-color);
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+input[type="number"] {
+    width: 100%;
+}
+select {
+    width: 100%;
+    cursor: pointer;
+}
+.color-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+.color-input input[type="color"] {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: transparent;
+}
+#addColor {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    border: 2px dashed var(--border-color);
+    color: var(--text-color);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#addColor:hover {
+    background-color: var(--border-color);
+}
+.color-count {
+    font-size: 13px;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: 8px;
+}
+button {
+    font-family: 'Courier New', monospace;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+.primary-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+.secondary-btn {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+}
+.secondary-btn:hover {
+    background-color: var(--border-color);
+}
+.output-panel {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pattern-container {
+    overflow: auto;
+    padding: 20px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    min-height: 300px;
+}
+#pattern {
+    display: grid;
+    border: 1px solid var(--border-color);
+}
+.pixel {
+    transition: background-color 0.3s ease;
+}
