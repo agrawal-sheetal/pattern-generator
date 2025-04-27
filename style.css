@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: 'Courier New', monospace;
+    font-family: monospace;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -86,7 +86,7 @@ input, select {
     padding: 10px;
     border: 2px solid var(--border-color);
     border-radius: 6px;
-    font-family: 'Courier New', monospace;
+    font-family: monospace;
     font-size: 0.9rem;
     transition: border-color 0.3s ease;
     background-color: var(--bg-color);
