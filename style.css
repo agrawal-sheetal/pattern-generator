@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: monospace;
+    font-family: 'Courier New', monospace;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -39,12 +39,6 @@ header h1 {
     font-size: 2.5rem;
 }
 
-header p {
-    font-size: 1rem;
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
 .app-container {
     display: flex;
     flex-direction: column;
@@ -53,7 +47,6 @@ header p {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     padding: 2rem;
-    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -68,6 +61,33 @@ header p {
     flex-direction: column;
     gap: 1.5rem;
     min-width: 250px;
+    max-width: 300px;
+}
+
+.output-panel {
+    flex: 2;
+    min-height: 500px;
+    display: flex;
+}
+
+.pattern-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+#pattern {
+    display: grid;
+    background-color: white;
+}
+
+.pixel {
+    transition: background-color 0.3s ease;
 }
 
 .control-group {
@@ -89,7 +109,7 @@ input, select {
     font-family: monospace;
     font-size: 0.9rem;
     transition: border-color 0.3s ease;
-    background-color: var(--bg-color);
+    background-color: white;
 }
 
 input:focus, select:focus {
@@ -108,44 +128,21 @@ select {
 
 .color-inputs {
     display: flex;
-    flex-wrap: wrap;
     gap: 10px;
     align-items: center;
 }
 
+.color-input {
+    display: flex;
+}
+
 .color-input input[type="color"] {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     padding: 2px;
     border-radius: 6px;
     cursor: pointer;
-    background: transparent;
-}
-
-#addColor {
-    width: 40px;
-    height: 40px;
-    border-radius: 6px;
-    background-color: var(--bg-color);
-    border: 2px dashed var(--border-color);
-    color: var(--text-color);
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-#addColor:hover {
-    background-color: var(--border-color);
-}
-
-.color-count {
-    font-size: 0.8rem;
-    color: var(--text-color);
-    opacity: 0.7;
-    margin-top: 0.5rem;
+    border: 2px solid var(--border-color);
 }
 
 button {
@@ -162,6 +159,7 @@ button {
 .primary-btn {
     background-color: var(--primary-color);
     color: white;
+    margin-top: 1rem;
 }
 
 .primary-btn:hover {
@@ -177,31 +175,4 @@ button {
 
 .secondary-btn:hover {
     background-color: var(--border-color);
-}
-.output-panel {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pattern-container {
-    overflow: auto;
-    padding: 20px;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bg-color);
-    border-radius: 8px;
-    min-height: 300px;
-}
-
-#pattern {
-    display: grid;
-    border: 1px solid var(--border-color);
-}
-
-.pixel {
-    transition: background-color 0.3s ease;
 }
