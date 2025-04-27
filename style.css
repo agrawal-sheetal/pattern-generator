@@ -8,94 +8,111 @@
     --border-color: #dee2e6;
     --success-color: #06d6a0;
 }
+
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
+
 body {
     font-family: 'Courier New', monospace;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.6px;
+    line-height: 1.6;
     padding: 20px;
 }
+
 .container {
     max-width: 1200px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
+
 header {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
 }
+
 header h1 {
     color: var(--primary-color);
-    margin-bottom: 8px;
-    font-size: 40px;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
 }
+
 header p {
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--text-color);
     opacity: 0.8;
 }
+
 .app-container {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 2rem;
     background-color: var(--panel-bg);
     border-radius: 12px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-    padding: 32px;
-    margin-bottom: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
+
 @media (min-width: 768px) {
     .app-container {
         flex-direction: row;
     }
 }
+
 .controls-panel {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
     min-width: 250px;
 }
+
 .control-group {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0.5rem;
 }
+
 label {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: var(--text-color);
 }
+
 input, select {
     padding: 10px;
     border: 2px solid var(--border-color);
     border-radius: 6px;
     font-family: 'Courier New', monospace;
-    font-size: 14px;
+    font-size: 0.9rem;
     transition: border-color 0.3s ease;
     background-color: var(--bg-color);
 }
+
 input:focus, select:focus {
     outline: none;
     border-color: var(--primary-color);
 }
+
 input[type="number"] {
     width: 100%;
 }
+
 select {
     width: 100%;
     cursor: pointer;
 }
+
 .color-inputs {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
 }
+
 .color-input input[type="color"] {
     width: 40px;
     height: 40px;
@@ -104,6 +121,7 @@ select {
     cursor: pointer;
     background: transparent;
 }
+
 #addColor {
     width: 40px;
     height: 40px;
@@ -111,45 +129,52 @@ select {
     background-color: var(--bg-color);
     border: 2px dashed var(--border-color);
     color: var(--text-color);
-    font-size: 24px;
+    font-size: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 #addColor:hover {
     background-color: var(--border-color);
 }
+
 .color-count {
-    font-size: 13px;
+    font-size: 0.8rem;
     color: var(--text-color);
     opacity: 0.7;
-    margin-top: 8px;
+    margin-top: 0.5rem;
 }
+
 button {
     font-family: 'Courier New', monospace;
     padding: 12px 20px;
     border: none;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .primary-btn {
     background-color: var(--primary-color);
     color: white;
 }
+
 .primary-btn:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
 }
+
 .secondary-btn {
     background-color: var(--bg-color);
     color: var(--text-color);
     border: 2px solid var(--border-color);
 }
+
 .secondary-btn:hover {
     background-color: var(--border-color);
 }
@@ -159,6 +184,7 @@ button {
     justify-content: center;
     align-items: center;
 }
+
 .pattern-container {
     overflow: auto;
     padding: 20px;
@@ -170,10 +196,12 @@ button {
     border-radius: 8px;
     min-height: 300px;
 }
+
 #pattern {
     display: grid;
     border: 1px solid var(--border-color);
 }
+
 .pixel {
     transition: background-color 0.3s ease;
 }
